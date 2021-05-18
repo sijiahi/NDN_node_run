@@ -4,7 +4,7 @@ then
   echo 'Unable to obtain superuser privilege'
   exit 2
 fi
-sudo gnome-terminal -t "nfd-runner" -x bash -c "sudo bash scripts/nfd.sh;"
+sudo gnome-terminal -t "nfd-runner" -x bash -c "sudo bash scripts/nfd.sh;exec bash;"
 sleep 3
 gnome-terminal -t "repo" -x bash -c " bash scripts/repo.sh;exec bash;"
 gnome-terminal --window -x bash -c " bash scripts/webpage.sh;exec bash;"
